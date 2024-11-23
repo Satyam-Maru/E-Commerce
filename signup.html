@@ -5,7 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+<<<<<<< HEAD
 	<link rel="stylesheet" href="css/signup.css "> 
+=======
+	<link rel="stylesheet" href="/css/signup.css">
+	<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+>>>>>>> cbea1233d10b66b0391dff0ec56fedec0c777ea5
 </head>
 
 <body>
@@ -20,10 +25,10 @@
 					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<span>or use your email for registration</span>
-				<input type="text" placeholder="Name" />
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
-				<button>Sign Up</button>
+				<input type="text" placeholder="Name" id="new_user_name" required />
+				<input type="email" placeholder="Email" id="new_user_email" required />
+				<input type="password" placeholder="Password" id="new_user_pass" required />
+				<button id="sign_up_btn">Sign Up</button>
 			</form>
 		</div>
 		<div class="form-container sign-in-container">
@@ -35,10 +40,10 @@
 					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<span>or use your account</span>
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
+				<input type="email" placeholder="Email" id="exist_user_email" required />
+				<input type="password" placeholder="Password" id="exist_user_pass" required />
 				<a href="#">Forgot your password?</a>
-				<button>Sign In</button>
+				<button id="sign_in_btn">Sign In</button>
 			</form>
 		</div>
 		<div class="overlay-container">
@@ -56,15 +61,7 @@
 			</div>
 		</div>
 	</div>
-
-	<footer>
-		<p>
-			Created with <i class="fa fa-heart"></i> by
-			<a target="_blank" href="https://florin-pop.com">Florin Pop</a>
-			- Read how I created this and how you can join the challenge
-			<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
-		</p>
-	</footer>
+	<script src="/js/supabase.js"></script>
 	<script src="/js/signup.js"></script>
 </body>
 
