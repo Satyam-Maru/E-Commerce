@@ -1,0 +1,117 @@
+/* Hex color codes:  #d4145a and  #fbb03b */
+
+:root {
+    --borders: orangered;
+    --hc: darkorange;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-color: var(--borders);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: darkorange;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.items ul {
+    display: flex;
+    list-style: none;
+    margin: 25px;
+}
+
+.items ul li {
+    display: inline-block;
+    padding: 12px;
+}
+
+.items ul a {
+    text-decoration: none;
+    font-size: 15px;
+    font-size: 18px;
+    color: black;
+}
+
+
+.items a:hover {
+    color: var(--hc);
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    height: 30px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.search div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.buttons i {
+    margin: 10px;
+}
+
+.selection {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.Product ul {
+    list-style: none;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    display: grid;
+    row-gap: 20px;
+}
+
+.Product ul li a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.advertise {
+    width: 70vw;
+}
+
+.advertise img {
+    width: 70vw;
+
+}
+
+a:hover {
+    color: var(--hc);
+}
