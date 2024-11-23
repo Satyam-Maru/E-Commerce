@@ -23,12 +23,21 @@ async function insertSingleUser(email, password) {
 }
 
 async function fetchData() {
-    const { data, error } = await supabase_data.from('users').select('*');
+    const { data, error } = await supabase_data
+        .from('users')
+        .select('*');
+
     if (error) {
         console.error('Error:', error);
     } else {
-        console.log('Data:', data);
+        data.forEach(row => {
+            console.log(row.user_email);
+        });
+        console.log('hello');
     }
 }
 
 // insertSingleUser("firstuser@gmail.com", "firstuser123");
+
+fetchData();
+console.log('hi');
