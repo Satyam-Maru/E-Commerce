@@ -4,11 +4,31 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 // Initialize the client
 const supabase_data = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-(async () => {
+async function insertData(tableName, rows) {
+    const { data, error } = await supabase_data.from(tableName).insert(rows);
+
+    if (error) {
+        console.error(`Error inserting data into ${tableName}:`, error);
+        return { error };
+    }
+
+    console.log(`Data successfully inserted into ${tableName}:`, data);
+    return { data };
+}
+
+async function insertSingleUser(email, password) {
+    const user = { user_email: email, user_pass: password };
+    const result = await insertData('users', [user]);
+    console.log(result);
+}
+
+async function fetchData() {
     const { data, error } = await supabase_data.from('users').select('*');
     if (error) {
         console.error('Error:', error);
     } else {
         console.log('Data:', data);
     }
-})();
+}
+
+// insertSingleUser("firstuser@gmail.com", "firstuser123");
