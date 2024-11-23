@@ -21,9 +21,9 @@
 					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<span>or use your email for registration</span>
-				<input type="text" placeholder="Name" id="new_user_name" />
-				<input type="email" placeholder="Email" id="new_user_email" />
-				<input type="password" placeholder="Password" id="new_user_pass" />
+				<input type="text" placeholder="Name" id="new_user_name" required />
+				<input type="email" placeholder="Email" id="new_user_email" required />
+				<input type="password" placeholder="Password" id="new_user_pass" required />
 				<button id="sign_up_btn">Sign Up</button>
 			</form>
 		</div>
@@ -36,8 +36,8 @@
 					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 				</div>
 				<span>or use your account</span>
-				<input type="email" placeholder="Email" id="exist_user_email" />
-				<input type="password" placeholder="Password" id="exist_user_pass" />
+				<input type="email" placeholder="Email" id="exist_user_email" required />
+				<input type="password" placeholder="Password" id="exist_user_pass" required />
 				<a href="#">Forgot your password?</a>
 				<button id="sign_in_btn">Sign In</button>
 			</form>
@@ -57,8 +57,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="/js/signup.js"></script>
 	<script src="/js/supabase.js"></script>
+	<script src="/js/signup.js"></script>
 </body>
 
 </html>
