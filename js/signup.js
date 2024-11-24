@@ -18,10 +18,11 @@ async function sign_up() {
 
 	if (!passChecker(password.value)) {
 		window.prompt("Enter a valid password");
+	}else {
+		insertSingleUser(user_name.value, email.value, password.value);
+		window.open('/home.html');
 	}
 
-	insertSingleUser(user_name.value, email.value, password.value);
-	console.log("inserted");
 }
 
 async function sign_in() {
