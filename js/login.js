@@ -3,25 +3,27 @@ let login_password = document.getElementById("exist_user_pass");
 const signInBtn = document.getElementById("sign_in_btn");
 
 signInBtn.addEventListener("click", () => {
-    user_exist();
+  checkUserExists();
 });
 
-async function user_exist() {
+async function checkUserExists() {
+  try {
     const { data, error } = await supabase_data
       .from('users')
       .select('*');
-  
+
     if (error) {
-      console.error('Error:', error);
-    } else {
-        console.log('Fetched data:', data);
-
-        data.forEach(row => {
-            console.log(row.user_id);
-        });
-      
-      console.log('Fetch complete');
+      console.error('Error fetching user data:', error);
+      return;
     }
-  }
 
-  console.log("hi manthan");
+    data.forEach(row => {
+      if (login_email.value == row.user_email && login_password.value == row.user_pass) {
+        console.log("success", row.user_email, row.user_pass);
+      }
+    });
+
+  } catch (err) {
+    console.error('Unexpected error:', err);
+  }
+}
