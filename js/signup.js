@@ -10,8 +10,9 @@ let password = document.getElementById("new_user_pass");
 const signUp = document.getElementById("sign_up_btn");
 const signIn = document.getElementById("sign_in_btn");
 
-signUp.addEventListener("click", sign_up());
-signIn.addEventListener("click", abc());
+signUp.addEventListener("click", ()=> {
+	sign_up()
+});
 
 async function sign_up() {
 
