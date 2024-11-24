@@ -136,3 +136,53 @@ footer p {
         margin-bottom: 20px;
     }
 }
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-color: var(--borders);
+    width: 100%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(80deg, orangered, blue, #ee0979);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.items ul {
+    display: flex;
+    list-style: none;
+    margin: 25px;
+}
+
+.items ul li {
+    margin: 0 25px;
+    position: relative;
+}
+
+.items ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+.navbar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: blue;
+    left: 0;
+    position: absolute;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
