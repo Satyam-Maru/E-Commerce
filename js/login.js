@@ -17,9 +17,12 @@ async function checkUserExists() {
       return;
     }
 
+    console.log(login_email.value, login_password.value);
+
     data.forEach(row => {
       if (login_email.value == row.user_email && login_password.value == row.user_pass) {
         console.log("success", row.user_email, row.user_pass);
+        window.open('/home.html');
       }
     });
 
