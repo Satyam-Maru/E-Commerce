@@ -128,13 +128,58 @@ body {
 }
 
 
-.advertise {
+/* .advertise {
     width: 70vw;
 }
 
 .advertise img {
     width: 60vw;
 
+} */
+
+.slider{
+    position: relative;
+    width: 70vw;
+    height: 70vh;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides{
+    width: 100%;
+    height: 100%;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: none;
+}
+
+img.displaySlide{
+    display: block;
+}
+
+.slider button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 5px;
+    font-size: 2rem;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: salmon;
+    color: white;
+}
+
+.prev{
+    left: 0;
+}
+
+.next{
+    right: 0;
 }
 
 a:hover {
