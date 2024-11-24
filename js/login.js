@@ -1,11 +1,27 @@
-async function insertData(tableName, rows) {
-	const { data, error } = await supabase_data.from(tableName).insert(rows);
+let login_email = document.getElementById("exist_user_email");
+let login_password = document.getElementById("exist_user_pass");
+const signInBtn = document.getElementById("sign_in_btn");
 
-	if (error) {
-		console.error(`Error inserting data into ${tableName}:`, error);
-		return { error };
-	}
+signInBtn.addEventListener("click", () => {
+    user_exist();
+});
 
-	console.log(`Data successfully inserted into ${tableName}:`, data);
-	return { data };
-}
+async function user_exist() {
+    const { data, error } = await supabase_data
+      .from('users')
+      .select('*');
+  
+    if (error) {
+      console.error('Error:', error);
+    } else {
+        console.log('Fetched data:', data);
+
+        data.forEach(row => {
+            console.log(row.user_id);
+        });
+      
+      console.log('Fetch complete');
+    }
+  }
+
+  console.log("hi manthan");
