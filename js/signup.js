@@ -10,7 +10,7 @@ let password = document.getElementById("new_user_pass");
 const signUp = document.getElementById("sign_up_btn");
 const signIn = document.getElementById("sign_in_btn");
 
-signUp.addEventListener("click", ()=> {
+signUp.addEventListener("click", () => {
 	sign_up()
 });
 
@@ -18,14 +18,11 @@ async function sign_up() {
 
 	if (!passChecker(password.value)) {
 		window.prompt("Enter a valid password");
+		return;
 	}
 
 	insertSingleUser(user_name.value, email.value, password.value);
 	console.log("inserted");
-}
-
-async function sign_in() {
-
 }
 
 function passChecker(password) {
