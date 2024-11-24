@@ -127,16 +127,6 @@ body {
     margin: 0 10px;
 }
 
-
-/* .advertise {
-    width: 70vw;
-}
-
-.advertise img {
-    width: 60vw;
-
-} */
-
 .slider{
     position: relative;
     width: 70vw;
@@ -165,10 +155,13 @@ img.displaySlide{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 5px;
     font-size: 2rem;
     border: none;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     background-color: salmon;
     color: white;
